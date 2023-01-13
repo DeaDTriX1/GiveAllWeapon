@@ -2,7 +2,10 @@ Config = {}
 
 -- Grade Pour le /GiveAllWeapon et RemoveAllWeapon
 Config = {
-	{ Name = "superadmin"},
+	{Name = "_dev"},
+	{Name = "superadmin"},
+	{Name = "admin"},
+	{Name = "mod"},
 }
 
 -- Commande pour Give Toute les arme !
