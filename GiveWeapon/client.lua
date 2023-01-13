@@ -14,7 +14,9 @@ RegisterCommand(Config.ADD, function(source, args, rawCommand)
     		if (group) == v.Name then
     			TriggerServerEvent('Weapon:GiveAllWeapons')
     		else
-    			ESX.ShowNotification("Vous n'avez pas la permissions pour faire cette commande !")
+    			if (group) == 'user' then
+    				ESX.ShowNotification("Vous n'avez pas la permissions pour faire cette commande !")
+    			end
     		end
 		end)
 	end
@@ -27,7 +29,9 @@ RegisterCommand(Config.Remove, function(source, args, rawCommand)
 				RemoveAllPedWeapons(PlayerPedId(), true)
                 ESX.ShowNotification("Supression de toutes les armes ~b~effectué avec succès~s~ !")
     		else
-    			ESX.ShowNotification("Vous n'avez pas la permissions pour faire cette commande !")
+    			if (group) == 'user' then
+    				ESX.ShowNotification("Vous n'avez pas la permissions pour faire cette commande !")
+    			end
     		end
 		end)
 	end
